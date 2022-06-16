@@ -38,25 +38,24 @@ mv python_scripts.tar.gz python_scripts
 cd python_scripts  
 tar -xvkf python_scripts.tar.gz  
 ```
-### mover archivos
+mover archivos a la carpeta de trabajo
 ```
 mv Sample_files data  
 cd data  
 ```
-### renombramos   
+renombramos con nombres coherentes   
 ```
 mv exp02pool02_S1_L001_R1_001.fastq R1.fastq  
 mv exp02pool02_S1_L001_R2_001.fastq R2.fastq  
 ```
+contamos cuantas secuencias tienen los archivos de fastq
 ```
-wc -l R1.fastq  
-  
 grep -c "+" R1.fastq  
 grep -c "+" R2.fastq  
 ```  
 **##50000 seq en cada uno**
   
-### revisar calidad  
+## revisar calidad  
   
 #### hacer el directorio  calidad
 
