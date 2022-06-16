@@ -14,10 +14,9 @@
 ## Descargamos los archivos de entrada
  
  ### Todo codigo está basado y modificado de Bálint, Miklós, et al. "An Illumina metabarcoding pipeline for fungi." Ecology and evolution 4.13 (2014): 2642-2653.
-
-`wget https://dataportal.senckenberg.de/dataset/3f8de147-6017-408e-9a04-8542f2e20d66/resource/85de7956-1f72-46cc-b416-a171a61b608e/download/illumina_metabarcoding_pipeline_scripts-examples.zip](https://dataportal.senckenberg.de/dataset/3f8de147-6017-408e-9a04-8542f2e20d66/resource/85de7956-1f72-46cc-b416-a171a61b608e/download/illumina_metabarcoding_pipeline_scripts-examples.zip)`
+wget https://dataportal.senckenberg.de/dataset/3f8de147-6017-408e-9a04-8542f2e20d66/resource/85de7956-1f72-46cc-b416-a171a61b608e/download/illumina_metabarcoding_pipeline_scripts-examples.zip
   
-`wget http://drive5.com/python/python_scripts.tar.gz`
+wget http://drive5.com/python/python_scripts.tar.gz
   
 ## descomprimir
 unzip illumina_metabarcoding_pipeline_scripts-examples.zip  
