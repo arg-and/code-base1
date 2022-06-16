@@ -53,7 +53,7 @@ contamos cuantas secuencias tienen los archivos de fastq
 grep -c "+" R1.fastq  
 grep -c "+" R2.fastq  
 ```  
-**##50000 seq en cada uno**
+**##50000 seqs en cada uno**
   
 ## revisar calidad  
   
@@ -82,7 +82,7 @@ grep -c "+" Filtered_reads_without_Ns_quality_threshold_26_length_threshold_150_
 grep -c "+" Filtered_reads_without_Ns_quality_threshold_26_length_threshold_150_R2.fastq  
 ```  
   
-**#44692** 
+**#44692 seqs** 
   
 ### renombramos y verificamos secuencias
 ```  
@@ -108,7 +108,7 @@ pandaseq -f fR1.fastq -r fR2.fastq -F N -o 5 > paired_assembled.fastq
 grep -c "+" paired_assembled.fastq  
 ```  
   
-**#41759**
+**#41759 seqs**
   
   
   
@@ -126,14 +126,14 @@ fqgrep -mN -p CT[TCG]TT[CGA]CC[GT]CTTCACTCG -e paired_assembled.fastq > good_3-5
 grep -c "+" good_5-3.fastq  
 grep -c "+" good_3-5.fastq  
 ```  
-**#19923 19270**
+**#19923 seqs #19270 seqs**
 
 ```
 fastx_reverse_complement -Q33 -i good_3-5.fastq >> good_5-3.fastq  
   
 grep -c "+" good_5-3.fastq  
 ```  
-**#39193**  
+**#39193 seqs**  
   
 ## Remove multiprimer  
 #Remove primer artifacts  
@@ -153,7 +153,7 @@ python2 remove_multiprimer.py -i good_5-3.fastq -o paired_assembled_good.fastq -
 grep -c "+" good_5-3.fastq  
 grep -c "+" paired_assembled_good.fastq  
 ```  
-**#39193 #38980**
+**#39193 seqs #38980 seqs**
   
 ## Demultiplexing  
   
@@ -169,7 +169,7 @@ perl [rename.pl](http://rename.pl/)
   
 cat renamed_*.fasta >> combined_samples.fasta  
 ```  
-**#33252**
+**#33252 seqs**
   
 ```  
 fastx_trimmer -f 27 -i combined_samples.fasta -o head_trimmed.fasta  
@@ -178,7 +178,7 @@ fastx_trimmer -t 26 -i head_trimmed.fasta -o trimmed.fasta
 grep -c ">" head_trimmed.fasta  
 grep -c ">" trimmed.fasta  
 ```  
-**#33252**
+**#33252 seqs**
   
 ## Extract fungal ITS  
   
@@ -207,7 +207,7 @@ cp outITS.ITS2.full_and_partial.fasta ITS2.fasta
   
 grep -c ">" ITS2.fasta  
 ```
-**#29348**  
+**#29348 seqs**  
   
 ## Similarity clustering  
 ```  
@@ -247,7 +247,7 @@ grep -c ">" zotus.fasta
   
 grep -c ">" chimeras.fasta  
 ```  
-**#544 #5 #520**
+**#544 seqs #5 seqs #520 seqs**
   
 ## Blast  
   
