@@ -55,6 +55,7 @@ firefox R2_fastqc.html&
   
 ### filtrar por calidad  
   
+ ** ##moverse al directirio con los script Scripts_to_supply**
 cp Reads_Quality_Length_distribution.pl ~/cursoLAVIS3/data  
   
 perl Reads_Quality_Length_distribution.pl -fw R1.fastq -rw R2.fastq -sc 33 -q 26 -l 150 -ld N  
