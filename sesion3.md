@@ -266,22 +266,18 @@ mv output.xml otutable
 zip -q megan.zip nochimeras97.fasta output.xml  
   
   
-scp output_megan.fasta aarguelles@132.248.248.175:~/cursoLAVIS3/data/FungalITSextractor/clustering/blast/otutable  
+scp meganout.fasta aarguelles@132.248.248.175:~/cursoLAVIS3/data/FungalITSextractor/clustering/blast/otutable  
   
-scp output_megan.fasta aarguelles@132.248.248.175:~/cursoLAVIS3/data/FungalITSextractor/clustering/blast/otutable  
+scp meganout.fasta aarguelles@132.248.248.175:~/cursoLAVIS3/data/FungalITSextractor/clustering/blast/otutable  
   
-cp ~/cursoLAVIS3/python_scripts/fasta_number.py ~/cursoLAVIS3/data/FungalITSextractor/clustering/blast/otutable  
+cp ~/cursoLAVIS3/python_scripts/*.py ~/cursoLAVIS3/data/FungalITSextractor/clustering/blast/otutable    
   
-cp ~/cursoLAVIS3/python_scripts/die.py ~/cursoLAVIS3/data/FungalITSextractor/clustering/blast/otutable  
-  
-python2 fasta_number.py output_megan.fasta OTU_>fungalotus_numbered.fa  
+python2 fasta_number.py meganout.fasta OTU_>fungalotus_numbered.fa  
   
 cp ~/cursoLAVIS3/data/FungalITSextractor/clustering/ITS2.fasta ~/cursoLAVIS3/data/FungalITSextractor/clustering/blast/otutable  
   
 usearch11 -usearch_global ITS2.fasta -db fungalotus_numbered.fa -strand plus -id 0.97 -uc fungal_readmap.uc  
-  
-  
-cp ~/cursoLAVIS3/python_scripts/*.py ~/cursoLAVIS3/data/FungalITSextractor/clustering/blast/otutable  
+
   
 python2 uc2otutab.py fungal_readmap.uc > fungal_otu_table.txt  
   
