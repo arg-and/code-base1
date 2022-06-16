@@ -247,25 +247,22 @@ unzip unite.zip
 **#format database**  
 makeblastdb -in UNITE_public_01.12.2017.fasta -dbtype nucl -out unitforblast  
   
-blastn -db unitforblast -query nochimeras97.fasta -outfmt 5 -out output.xml -num_threads=4 -evalue 0.001 -max_target_seqs 1  
+blastn -db unitforblast -query nochimeras97.fasta -outfmt "6 qseqid salltitles" -out blasttable.tsv -num_threads=4 -evalue 0.001 -max_target_seqs 1  
   
   
-blastn -db unitforblast -query nochimeras97.fasta -outfmt "6 qseqid salltitles" -out output2.txt.tsv -num_threads=4 -evalue 0.001 -max_target_seqs 1  
-  
-  
-  
+**#usando MEGAN6**  
+#blastn -db unitforblast -query nochimeras97.fasta -outfmt 5 -out blasttable.xml -num_threads=4 -evalue 0.001 -max_target_seqs 1  
   
 ## Otutable  
   
 mkdir otutable  
   
 mv nochimeras97.fasta otutable  
-mv output.xml otutable  
-  
-  
-zip -q megan.zip nochimeras97.fasta output.xml  
-  
-  
+
+mv blasttable.xml otutable  
+    
+zip -q megan_in.zip nochimeras97.fasta blasttable.xml  
+
 scp meganout.fasta aarguelles@132.248.248.175:~/cursoLAVIS3/data/FungalITSextractor/clustering/blast/otutable  
   
 scp meganout.fasta aarguelles@132.248.248.175:~/cursoLAVIS3/data/FungalITSextractor/clustering/blast/otutable  
@@ -278,11 +275,11 @@ cp ~/cursoLAVIS3/data/FungalITSextractor/clustering/ITS2.fasta ~/cursoLAVIS3/dat
   
 usearch11 -usearch_global ITS2.fasta -db fungalotus_numbered.fa -strand plus -id 0.97 -uc fungal_readmap.uc  
 
-  
 python2 uc2otutab.py fungal_readmap.uc > fungal_otu_table.txt  
   
 head fungal_otu_table.txt  
   
+####END
   
 ## FUNGuild  
   
