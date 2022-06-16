@@ -6,7 +6,7 @@
 - Metabarcode (AAM)
 # Iniciamos en el server
 
-` ssh -Y -X aarguelles@132.248.248.175`
+` ssh -Y -X aarguelles@**IPdelcluster**
   
 `mkdir cursoLAVIS3`
   
@@ -267,9 +267,9 @@ mv blasttable.xml otutable
     
 zip -q megan_in.zip nochimeras97.fasta blasttable.xml  
 
-scp meganout.fasta aarguelles@132.248.248.175:~/cursoLAVIS3/data/FungalITSextractor/clustering/blast/otutable  
+scp meganout.fasta aarguelles@**IPdelcluster**:~/cursoLAVIS3/data/FungalITSextractor/clustering/blast/otutable  
   
-scp meganout.fasta aarguelles@132.248.248.175:~/cursoLAVIS3/data/FungalITSextractor/clustering/blast/otutable  
+scp meganout.fasta aarguelles@**IPdelcluster**:~/cursoLAVIS3/data/FungalITSextractor/clustering/blast/otutable  
   
 cp ~/cursoLAVIS3/python_scripts/*.py ~/cursoLAVIS3/data/FungalITSextractor/clustering/blast/otutable    
   
@@ -296,7 +296,6 @@ conda deactivate
   
 `python FUNGuild.py guild -taxa example/otu_table.taxa.txt  `
   
-
 head otu_table.taxa.txt
 
 ## descanso
