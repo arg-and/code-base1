@@ -55,7 +55,8 @@ firefox R2_fastqc.html&
   
 ### filtrar por calidad  
   
- ** ##moverse al directirio con los script Scripts_to_supply**
+ **##moverse al directirio con los script Scripts_to_supply**
+ 
 cp Reads_Quality_Length_distribution.pl ~/cursoLAVIS3/data  
   
 perl Reads_Quality_Length_distribution.pl -fw R1.fastq -rw R2.fastq -sc 33 -q 26 -l 150 -ld N  
@@ -71,9 +72,9 @@ grep -c "+" Filtered_reads_without_Ns_quality_threshold_26_length_threshold_150_
   
 #rename Filtered_reads_without_Ns_quality_threshold_26_length_threshold_150_R1.fastq and R2 to fR1 & fR2  
   
-`mv Filtered_reads_without_Ns_quality_threshold_26_length_threshold_150_R1.fastq fR1.fastq`
+mv Filtered_reads_without_Ns_quality_threshold_26_length_threshold_150_R1.fastq fR1.fastq
   
-`mv Filtered_reads_without_Ns_quality_threshold_26_length_threshold_150_R2.fastq fR2.fastq`
+mv Filtered_reads_without_Ns_quality_threshold_26_length_threshold_150_R2.fastq fR2.fastq
   
 grep -c "+" fR1.fastq  
 grep -c "+" fR2.fastq  
