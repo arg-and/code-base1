@@ -165,12 +165,15 @@ grep -c ">" trimmed.fasta
   
 ***### check or install HMMER ver. 3, be patient :)***  
   
-`scp FungalITSextractor aarguelles@132.248.248.175:/home/aarguelles/cursoLAVIS3/data`  
+git clone https://github.com/arg-and/code-base1.git
+
+cd code-base1
+
+cd FungalITSextractor
+
+cp ~/cursoLAVIS3/data/trimmed.fasta ~/cursoLAVIS3/data/code-base1/FungalITSextractor/indata 
   
-cd unzip FungalITSextractor  
-  
-cp trimmed.fasta FungalITSextractor  
-cd FungalITSextractor  
+
 mv trimmed.fasta indata.fasta  
   
 
